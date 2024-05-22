@@ -20,7 +20,7 @@ function App() {
   ]
 
   return (
-    <div className=' bg-zinc-950 min-h-screen py-5 flex flex-col xl:flex-row justify-start xl:justify-center xl:items-start  items-center gap-2 sm:gap-8 xl:relative xl:gap-5'>
+    <div className=' bg-zinc-950 min-h-screen py-5 flex flex-col xl:flex-row justify-start xl:justify-center xl:items-start  items-center gap-2 sm:gap-8 xl:relative xl:gap-5 pb-[9vh]'>
       <Indic />
 
       <BrowserRouter>

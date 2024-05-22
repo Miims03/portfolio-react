@@ -13,7 +13,7 @@ function BotBar() {
     ]
 
   return (
-    <div className='fixed h-[7vh] sm:h-[7.5vh] w-screen bg-zinc-600/30 rounded-t-xl border border-zinc-700 bottom-0 z-10 flex flex-row justify-center items-center gap-4 sm:gap-6 backdrop-blur-lg xl:hidden'>
+    <div className='fixed h-[7vh] sm:h-[7.5vh] w-screen bg-zinc-600/30 rounded-t-xl border border-zinc-700 bottom-0 z-10 flex flex-row justify-center items-center gap-4 sm:gap-6 backdrop-blur-lg lg:hidden'>
         {navLinks.map((link, index) => (
                 <Link
                     to={link.path}

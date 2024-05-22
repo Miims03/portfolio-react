@@ -61,8 +61,9 @@ function MainBar() {
     return (
         <motion.main className={` bg-zinc-800/70 border rounded-2xl border-zinc-700 flex flex-col justify-start items-start xl:items-center pl-3 xl:pl-0  lg:text-red-50  xl:sticky  
         relative overflow-hidden sm:mt-11 sm:pl-8 xl:top-[4rem]`}
-        initial={{height : HeightValue ,minWidth : widthValue}}
+        initial={{height : HeightValue ,minWidth : widthValue, opacity: 0}}
         animate={{
+            opacity: 1,
             height: mainOpen && !mainAnime ? HeightValueMenu : HeightValue,
             minWidth: widthValue
         }}
@@ -70,11 +71,11 @@ function MainBar() {
         transition={{ duration: 0.3 }}
         >
             <section className='flex xl:flex-col justify-start items-center mt-3 xl:gap-4  sm:py-3'>
-                <div className='w-[4.8rem] h-[4.8rem] rounded-3xl bg-zinc-700/50 flex justify-center items-center sm:h-[8rem] sm:w-[8rem] '>
+                <div className='w-[4.8rem] h-[4.8rem] rounded-3xl bg-gradient-to-br from-zinc-700 to-zinc-800 flex justify-center items-center sm:h-[8rem] sm:w-[8rem] '>
                     <img className='h-[70%] w-[70%]' src={Logo} />
                 </div>
                 <div className='ml-5 xl:ml-0 flex flex-col justify-center items-center gap-2 sm:gap-5'>
-                    <h1 className='text-zinc-50 font-semibold text-lg sm:text-3xl  '>Amine Chraibi</h1>
+                    <h1 className='text-zinc-50 font-semibold text-lg sm:text-3xl'>Amine Chraibi</h1>
                     <h2 className='text-zinc-50/70 text-xs bg-zinc-700/30 pt-0.5 sm:pt-1.5 rounded-lg flex justify-center items-center pb-1 sm:pb-1.5 sm:w-32'>Web Developer</h2>
                 </div>
                 <button  before='Show Contacts'

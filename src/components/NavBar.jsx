@@ -13,7 +13,7 @@ function NavBar() {
     ]
 
     return (
-        <div className='bg-zinc-700/30 border-b border-l h-[4rem] w-[34rem] border-zinc-700 absolute top-0 right-0 rounded-tr-2xl rounded-bl-2xl xl:flex flex-row justify-center items-center gap-10 hidden'>
+        <div className='bg-zinc-700/30 border-b border-l h-[4rem] w-[34rem] border-zinc-700 absolute top-0 right-0 rounded-tr-2xl rounded-bl-2xl lg:flex flex-row justify-center items-center gap-10 hidden'>
             {navLinks.map((link, index) => (
                 <Link
                     to={link.path}
