@@ -5,11 +5,11 @@ function NavBar() {
     const location = useLocation();
 
     const navLinks = [
-        { path: "/", name: "About" },
-        { path: "/resume", name: "Resume" },
-        { path: "/portfolio", name: 'Portfolio' },
-        { path: "/blog", name: "Blog" },
-        { path: "/contact", name: 'Contact' },
+        { path: "/portfolio-react/", name: "About" },
+        { path: "/portfolio-react/resume", name: "Resume" },
+        { path: "/portfolio-react/portfolio", name: 'Portfolio' },
+        { path: "/portfolio-react/blog", name: "Blog" },
+        { path: "/portfolio-react/contact", name: 'Contact' },
     ]
 
     return (
