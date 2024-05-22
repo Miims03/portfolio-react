@@ -12,11 +12,11 @@ import MainBar from './components/MainBar'
 function App() {
 
   const lesRoutes = [
-    { path: "/", element: About },
-    { path: "/resume", element: Resume },
-    { path: "/portfolio", element: Portfolio },
-    { path: "/blog", element: Blog },
-    { path: "/contact", element: Contact },
+    { path: "/portfolio-react/", element: About },
+    { path: "/portfolio-react/resume", element: Resume },
+    { path: "/portfolio-react/portfolio", element: Portfolio },
+    { path: "/portfolio-react/blog", element: Blog },
+    { path: "/portfolio-react/contact", element: Contact },
   ]
 
   return (
@@ -29,7 +29,7 @@ function App() {
         {lesRoutes.map((route, index) => (
           <Route key={index} path={route.path} element={<route.element/>} />
         ))}
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<Navigate to="/portfolio-react/" />} />
         </Routes>
         <BotBar />
       </BrowserRouter>
