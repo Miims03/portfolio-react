@@ -1,14 +1,28 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 function BotBar() {
+
+  const location = useLocation();
+
+  const navLinks = [
+    { path: "/", name: "About" },
+    { path: "/resume", name: "Resume" },
+    { path: "/portfolio", name: 'Portfolio' },
+    { path: "/blog", name: "Blog" },
+    { path: "/contact", name: 'Contact' },
+]
+
   return (
-    <div className='absolute h-[8.55vh] w-screen bg-zinc-600/30 rounded-t-xl border border-zinc-700 bottom-0 z-10 flex flex-row justify-center items-center gap-4 backdrop-blur-sm'>
-        {/* <Link to='/'>About</Link> */}
-        <a href="" className=' text-yellow-300/80 text-xs font-medium'>About</a>
-        <a href="" className='text-gray-50/70 text-xs font-medium '>Resume</a>
-        <a href="" className='text-gray-50/70 text-xs font-medium '>Portfolio</a>
-        <a href="" className='text-gray-50/70 text-xs font-medium '>Blog</a>
-        <a href="" className='text-gray-50/70 text-xs font-medium '>Contact</a>
+    <div className='fixed h-[7vh] sm:h-[7.5vh] w-screen bg-zinc-600/30 rounded-t-xl border border-zinc-700 bottom-0 z-10 flex flex-row justify-center items-center gap-4 sm:gap-6 backdrop-blur-lg xl:hidden'>
+        {navLinks.map((link, index) => (
+                <Link
+                    to={link.path}
+                    key={index}
+                    className={`text-base font-medium ${location.pathname === link.path ? 'text-yellow-300/80' : 'text-gray-50/70'} hover:text-yellow-300/80 duration-300`}
+                >
+                    {link.name}
+                </Link>
+            ))}
     </div>
   )
 }
